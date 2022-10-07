@@ -1,0 +1,105 @@
+.cards
+    display: grid 
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr))
+    grid-gap: 20px
+
+    .card
+        position: relative
+
+        .star
+            position: absolute
+            top: 10px
+            left: 10px 
+            z-index: 1
+            width: 20px
+            height: 20px
+            padding: 5px
+            background: $black
+            border-radius: 50%
+            color: #fff
+            cursor: pointer
+
+            &.liked
+                color: $orange        
+
+        &--top
+            display: flex
+            background: $darkgray
+
+            figure
+                img 
+                    max-width: 300px
+
+        &--bottom
+            padding: 20px 40px
+            background: rgba($darkgray, .5)
+            display: none
+
+            &.show
+                display: block
+
+            h3
+                margin: 0 0 10px 0
+                color: #fff
+
+            ul
+                margin: 0
+                padding: 0
+
+                li 
+                    color: rgba(#fff, .8)
+                    line-height: 1.6
+
+        &--details
+            padding: 20px
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            position: relative
+
+            &--group
+                flex: 1
+                margin-bottom: 20px
+
+            .info
+                margin-bottom: 15px
+
+                &:last-child
+                    margin-bottom: 0
+
+                h3
+                    font:
+                        size: 1.5rem
+                        weight: 900 
+                    color: #fff
+                    margin: 0 0 10px 0
+                    padding: 0
+
+                span 
+                    display: inline-block
+                    color: $lightgray
+
+                p
+                    display: flex
+                    align-items: center 
+                    color: #fff
+                    margin: 5px 0 0
+
+                    .status--icon
+                        margin-right: 10px
+
+    @media (max-width: $device-lg)
+        max-width: $device-sm
+        margin: auto
+
+    @media (max-width: $device-sm)
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+
+        .card
+            &--top
+                flex-direction: column
+
+                figure 
+                    img 
+                        width: 100%
+                        max-width: none

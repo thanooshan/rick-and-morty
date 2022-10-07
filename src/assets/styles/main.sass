@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap')
+@import 'vars'
+@import 'placeholder'
+@import 'button'
+@import 'form'
+@import 'cards'
+
+body
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: 'Inter', sans-serif
+    color: $black
+
+a 
+    display: inline-block
+
+h1 
+    font:
+        size: 70px
+        weight: 900
+    margin: 0
+
+    @media (max-width: $device-md)
+        font:
+            size: 50px
+
+    @media (max-width: $device-sm)
+        font:
+            size: 35px            
+
+.container
+    max-width: 1170px
+    margin: auto
+    padding: 0 15px
+
+figure 
+    margin: 0
+
+.capitalize
+    text-transform: capitalize
+
+.white
+    color: #fff !important 
+
+.text-center
+    text-align: center   
+
+.hero-area
+    padding: 50px 0
+
+    .hero
+        &--text
+            text-align: center
+            line-height: 1.1
+            text-transform: uppercase
+
+.bottom-area
+    background: $black
+    padding: 40px 0
+    // max-height: 600px
+    // overflow: auto
+
+.status--icon
+    width: 8px
+    height: 8px
+    border-radius: 50%
+    background: $lightgray
+
+    &.alive
+        background: $green
+
+    &.dead
+        background: $red    
+
